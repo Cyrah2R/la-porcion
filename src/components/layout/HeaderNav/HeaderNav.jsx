@@ -1,8 +1,7 @@
 import React, { useState }from 'react';
 import { NavLink } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
-import './HeaderNav.css';
+import Icono from '../../assets/iconos';
+import './headerNav.css';
 
 export const HeaderNav = () => {
 
@@ -23,7 +22,7 @@ export const HeaderNav = () => {
           onClick={ toggleMenu }
           className='header-button'
         >
-          <FontAwesomeIcon className='header-icon' icon={faBars} />
+          <Icono nombre='hamburguesa' />
         </button>
 
         <nav className={ `header-nav ${ menu ? 'menu' : ''}` }>

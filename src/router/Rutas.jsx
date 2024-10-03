@@ -8,7 +8,7 @@ import { Contacto } from '../components/Contacto';
 import { HeaderNav } from '../components/layout/HeaderNav/HeaderNav';
 import { Footer } from '../components/layout/Footer/Footer';
 
-export const MisRutas = () => {
+export const Rutas = () => {
     return  (
     <BrowserRouter>
         {/* HEADER Y NAVEGACION */}

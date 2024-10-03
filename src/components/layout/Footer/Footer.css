@@ -1,0 +1,56 @@
+footer {
+    width: 100vw;
+    height: 2rem; 
+    background: linear-gradient(to right, #ff8c00 25rem,#6AB644 55rem); /* Gradiente de verde a naranja difuminado */
+    padding: 0;
+
+    display: flex;
+    flex-flow: row nowrap; /* Asegúrate de que no haya saltos de línea */
+    justify-content: center; /* Centrar todo el contenido horizontalmente */
+    align-items: center; /* Alinear verticalmente al centro */
+
+    color: #ffffff;
+    font-family: system-ui; 
+    /* font-weight: bold;  */
+    text-shadow: 1px 1px #000000; 
+
+    border-top: 1px solid #000000; 
+}
+
+h4 {
+    color: #000000;
+}
+
+.footer {
+    width: 100vw;
+}
+
+.footer-section {
+    width: 100%;
+    display: flex;
+}
+
+.footer-links {
+
+}
+
+.footer-links-div {
+
+}
+
+.footer-below {
+
+}
+
+.footer-copyright {
+
+}
+
+.footer-below-links {
+
+}
+
+.footer-icons {
+    
+
+}

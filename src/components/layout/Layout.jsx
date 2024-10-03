@@ -1,24 +1,20 @@
-import { Footer } from "./Footer";
 import { HeaderNav } from "./HeaderNav";
-import { Main } from "./Main";
+import { Body } from "./Body";
 import { Footer } from "./Footer";
 
 function Layout () {
+
     return(
 
         <div>
             <HeaderNav />
 
-            <Main />
+            <Body />
 
             <Footer />
 
         </div>
-            
-
-
-
-
-
     );
 }
+
+export default Layout;

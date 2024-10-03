@@ -1,12 +1,12 @@
 import './App.css';
-import { MisRutas } from './router/MisRutas';
+import { Rutas } from './router/Rutas';
 
 function App() {
   return (
 
     <div className='layout'>
 
-      < MisRutas />
+      < Rutas />
 
     </div>
     
