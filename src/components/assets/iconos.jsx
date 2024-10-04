@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faCoffee, faHome } from '@fortawesome/free-solid-svg-icons';
-import { faInstagram, faFacebook, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons';
 
 // Crea un objeto con los iconos que vas a usar
 const iconos = {
@@ -10,7 +10,6 @@ const iconos = {
   casa: faHome,
   instagram: faInstagram,
   facebook: faFacebook,
-  twitter: faTwitter,
 };
 
 const Icono = ({ nombre }) => {

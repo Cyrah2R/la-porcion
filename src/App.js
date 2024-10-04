@@ -1,16 +1,13 @@
-import './App.css';
-import { Rutas } from './router/Rutas';
+import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import Layout from './components/layout/Layout';
 
 function App() {
-  return (
-
-    <div className='layout'>
-
-      < Rutas />
-
-    </div>
-    
-  );
+    return (
+        <BrowserRouter>
+            <Layout />
+        </BrowserRouter>
+    );
 }
 
 export default App;

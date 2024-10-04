@@ -1,18 +1,13 @@
-import { HeaderNav } from "./HeaderNav";
-import { Body } from "./Body";
-import { Footer } from "./Footer";
+import { HeaderNav } from "./HeaderNav/HeaderNav";
+import { Body } from "./Body/Body";
+import { Footer } from "./Footer/Footer";
 
-function Layout () {
-
-    return(
-
+function Layout() {
+    return (
         <div>
             <HeaderNav />
-
             <Body />
-
             <Footer />
-
         </div>
     );
 }
