@@ -1,0 +1,13 @@
+.home {
+    width: 100vw;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    height: 80%;
+}
+
+.home h4 {
+    color: #ffffff;
+}

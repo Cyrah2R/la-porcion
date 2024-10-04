@@ -63,6 +63,7 @@ header {
 
 @media screen and (max-width: 30rem) {
     .header {
+        width: 100vw;
         padding: 0;
         
         position: relative; /* Para que el menú se posicione relativo al header */

@@ -4,10 +4,16 @@ import { Footer } from "./Footer/Footer";
 
 function Layout() {
     return (
-        <div>
-            <HeaderNav />
-            <Body />
-            <Footer />
+        <div className="layout">
+            <div className="header">
+                <HeaderNav />
+            </div>
+            <div className="body">
+                <Body />
+            </div>
+            <div className="footer">
+                <Footer />
+            </div>
         </div>
     );
 }

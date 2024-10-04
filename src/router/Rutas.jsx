@@ -1,10 +1,13 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { Inicio } from '../components/Inicio';
-import { Home } from '../components/Home';
-import { Carta } from '../components/Carta';
-import { Servicios } from '../components/Servicios';
-import { Contacto } from '../components/Contacto';
+
+import { Inicio } from '../components/pages/Inicio';
+
+import { Home } from '../components/pages/Home'
+import { Carta } from '../components/pages/Carta';
+import { Servicios } from '../components/pages/Servicios';
+import { Contacto } from '../components/pages/Contacto';
+
 import Terms from '../legal/Terms';
 import Privacy from '../legal/Privacy';
 import Security from '../legal/Security';

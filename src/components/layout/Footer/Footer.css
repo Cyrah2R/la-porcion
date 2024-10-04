@@ -1,24 +1,6 @@
-/* footer {
-    /* width: 100vw;
-    height: 2rem; 
-    background: linear-gradient(to right, #ff8c00 25rem,#6AB644 55rem);
-    padding: 0;
-
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center; 
-    align-items: center;
-
-    color: #ffffff;
-    font-family: system-ui;  
-    font-weight: bold;  
-    text-shadow: 1px 1px #000000; 
-
-    border-top: 1px solid #000000;
-} */
-
 h4 {
     color: #000000;
+    text-shadow: none;
 }
 
 a {
@@ -27,7 +9,18 @@ a {
 }
 
 .footer {
+    width: 100vw;
+    height: auto; 
+    padding: 0;
+    display: flex;
+    flex-flow: row;
+    justify-content: center; 
+    align-items: center;
     background: linear-gradient(to right, #ff8c00 25rem,#6AB644 55rem); /* Gradiente de verde a naranja difuminado */
+    font-family: system-ui;  
+    font-weight: bold;  
+    text-shadow: 1px 1px #000000;
+    border-top: 1px solid #000000; 
 }
 
 .footer-section {
