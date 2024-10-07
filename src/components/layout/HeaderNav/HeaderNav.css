@@ -1,7 +1,7 @@
 header {
     width: 100vw;
     height: 2rem; 
-    background: linear-gradient(to right, #6AB644 25rem, #ff8c00 55rem); /* Gradiente de verde a naranja difuminado */
+    background: #6AB644; /* Gradiente de verde a naranja difuminado */
     padding: 0;
 
     display: flex;
@@ -61,7 +61,9 @@ header {
     text-decoration: none;  /* Quitar el subrayado de los enlaces */
 }
 
-@media screen and (max-width: 30rem) {
+@media (max-width: 850px) {}
+
+@media screen and (max-width: 550px) {
     .header {
         width: 100vw;
         padding: 0;
@@ -127,3 +129,5 @@ header {
         border-top: 1px solid #000000;
     }
 }
+
+@media screen and (max-width: 400px) {}

@@ -1,17 +1,13 @@
-.body-content {
+body {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center; /* Centra el contenido horizontalmente */
     justify-content: center; /* Centra el contenido verticalmente */
-    padding: 20px;
 }
 
 /* Estilos específicos para los componentes dentro del Body */
 @media screen and (max-width: 850px) {
-    .body-content {
-        padding: 10px; /* Menos espaciado en dispositivos móviles */
-    }
 }
 
 @media screen and (max-width: 550px) {

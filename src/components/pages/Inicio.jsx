@@ -1,9 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Icono from '../assets/iconos';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDoorOpen } from '@fortawesome/free-solid-svg-icons';
-//import soundEffect from './path/to/sound-effect.mp3'; // Asegúrate de que la ruta sea correcta
-
 
 export const Inicio = () => {
 
@@ -11,12 +10,6 @@ export const Inicio = () => {
   const videoRef = useRef(null);
   const [showIcon, setShowIcon] = useState(false);
   const [isEntering, setIsEntering] = useState(false);
-
-  //Sonido para video
-  // const playSound = () => {
-  //   const audio = new Audio(soundEffect);
-  //   audio.play();
-  // };
 
   // Mostrar icono - retardo 
   useEffect(() => {
