@@ -7,7 +7,7 @@ import { faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons';
 const iconos = {
   hamburguesa: faBars,
   cafe: faCoffee,
-  casa: faDoorOpen,
+  puerta: faDoorOpen,
   instagram: faInstagram,
   facebook: faFacebook,
 };

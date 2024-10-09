@@ -1,13 +1,136 @@
-.home {
-    width: 100vw;
+/* ---------- ESTILOS PAGINA INICIO ----------- */
+
+.inicio {
     display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #000000;
-    height: 80%;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente el contenido */
+    justify-content: center; /* Centra verticalmente el contenido */
+    height: 100vh; /* Altura completa de la ventana */
+    width: 100vw; /* Ancho completo de la ventana */
+    background-color: black; /* Fondo negro */
+    color: white; /* Color de texto blanco para mejor contraste */
+    overflow: hidden; /* Evita que se muestre contenido fuera del área visible */
 }
 
-.home h4 {
-    color: #ffffff;
+.video-container {
+    position: relative; /* Posiciona el video de manera relativa */
+    width: 100%; /* Ancho completo */
+    height: auto; /* Altura automática para mantener proporciones */
+    overflow: hidden; /* Asegura que el video no sobresalga */
 }
+
+.responsive-video {
+    width: 100%; /* Ancho completo */
+    height: auto; /* Mantiene las proporciones del video */
+}
+
+.icon-container {
+    position: absolute; /* Posiciona el ícono de manera absoluta */
+    bottom: 20px; /* Distancia desde el fondo */
+    text-align: center; /* Centra el texto del ícono */
+    transition: opacity 0.5s ease; /* Transición suave para la opacidad */
+    color: white; /* Asegúrate de que el texto sea blanco */
+    opacity: 1; /* Haz visible el ícono desde el principio */
+}
+
+.inicio-button {
+    background: transparent; /* Fondo transparente */
+    border: none; /* Sin bordes */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    color: white; /* Color del ícono blanco */
+    font-size: 2rem; /* Tamaño del ícono, ajusta según sea necesario */
+}
+
+.inicio-button:hover {
+    opacity: 0.8; /* Efecto hover para el botón */
+}
+
+.icono {
+    color: #ffffff; /* Asegúrate de que el ícono sea blanco */
+}
+
+h3 {
+    margin-top: 10px; /* Espacio entre el ícono y el texto */
+    font-size: 1.5rem; /* Tamaño de la fuente */
+    color: white; /* Asegúrate de que el texto sea blanco */
+}
+
+
+/* ESTILOS PAGINA HOME */
+
+  .home h2 {
+    color: #ffffff;
+    font-weight: lighter;
+  }
+
+  .contenido-principal {
+    background-color: #212121;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .video-container {
+    width: 95%;
+    margin-bottom: 5px;
+  }
+
+  .informacion-container {
+    display: flex; /* Usa flexbox para poner las fotos y los datos en la misma fila */
+    justify-content: space-between; /* Separa los dos contenedores horizontalmente */
+    align-items: flex-start; /* Alinea ambos contenedores en la parte superior */
+    margin-left: 40px;
+    margin-top: 5px;
+    margin-bottom: 30px;
+  }
+
+  .fotos-bienvenida {
+    width: 45%; /* Ajusta este valor si quieres más o menos espacio */
+  }
+
+  .datos-empresa {
+    width: 45%; /* Ajusta el ancho según tu diseño */
+    margin-left: 20px; /* Añade un margen entre las fotos y los datos */
+    margin-top: 55px;
+  }
+
+  .datos-empresa ul {
+    padding-left: 20px; /* Añade un poco de espacio antes de la lista */
+  }
+
+  .datos-empresa ul li {
+    margin-bottom: 5px; /* Espacio entre los elementos de la lista */
+  }
+
+  .datos-empresa ul li a {
+    color: #6AB645; /* Color para los enlaces */
+    text-decoration: none;
+  }
+
+  .datos-empresa ul li a:hover {
+    text-decoration: underline;
+  }
+
+  .tlfno {
+    color: #6AB645; /* Color específico para el teléfono */
+    font-weight: bold; /* Resalta el número */
+  }
+
+  .tlfno:hover {
+    color: #4CAF50; /* Cambia el color al pasar el mouse */
+  }
+
+  .email {
+    color: #6AB645; /* Color específico para el email */
+    text-decoration: none; /* Elimina el subrayado */
+    font-weight: bold; /* Opcional: hace el email más destacado */
+  }
+
+  .email:hover {
+    text-decoration: underline; /* Subraya al pasar el mouse */
+    color: #4CAF50; /* Cambia el color al pasar el mouse */
+  }
+
+
+
+/**/
