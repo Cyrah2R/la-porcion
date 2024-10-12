@@ -16,7 +16,7 @@ a {
     flex-flow: row;
     justify-content: center; 
     align-items: center;
-    background: #ff8c00; /* Gradiente de verde a naranja difuminado */
+    background: #ff8c00; 
     font-family: system-ui;  
     font-weight: bold;  
     text-shadow: 1px 1px #000000;

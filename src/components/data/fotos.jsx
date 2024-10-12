@@ -11,10 +11,10 @@ export const fotos = [
         'categorias': 'LaPorcion',
         'descripcion': 'LaPorcion'
     },
-    {
-        'id': 'img3',
-        'nombre' : 'LaPorcion',
-        'categorias': 'LaPorcion',
-        'descripcion': 'LaPorcion'
-    },
-]
+    // {
+    //     'id': 'img3',
+    //     'nombre' : 'LaPorcion',
+    //     'categorias': 'LaPorcion',
+    //     'descripcion': 'LaPorcion'
+    // },
+];

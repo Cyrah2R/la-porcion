@@ -141,4 +141,76 @@ h3 {
 }
 */
 
-/**/
+.video-container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 20px auto; /* Centrar el contenedor */
+}
+
+.video {
+  width: 100%; /* Se ajusta al contenedor */
+  height: auto; /* Mantiene la proporción */
+  display: block; /* Evita el espacio adicional alrededor del video */
+}
+
+.fotos-empresa {
+  width: 80%; /* Igual que el contenedor de novedades */
+  max-width: 1200px; /* Tamaño máximo controlado */
+  margin: 0 auto; /* Centrar todo el contenedor */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fotos-empresa h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+/* ====================================================================== */
+
+/* ---------- ESTILOS PAGINA CARTA ----------- */
+
+.carta {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: black;
+  color: white;
+}
+
+.categorias {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.categorias button {
+  background-color: #ff8c00;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.categorias button:hover {
+  background-color: #ff8c00a0;
+}
+
+.items-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item {
+  margin: 10px 0;
+  text-align: center;
+  border: 1px solid white;
+  padding: 10px;
+  width: 100%;
+}
