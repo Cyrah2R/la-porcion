@@ -1,44 +1,83 @@
+import React, { useState } from 'react';
 
+const Contacto = () => {
+  const [motivo, setMotivo] = useState('');
+  const [archivo, setArchivo] = useState(null);
+  const [enviado, setEnviado] = useState(false); // Estado para manejar el mensaje de éxito
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
+    const formData = new FormData(e.target); // Crea un objeto FormData con los datos del formulario
 
-// import React from 'react'
+    fetch('https://formspree.io/f/{tu_form_id}', { // Reemplaza con tu URL de Formspree
+      method: 'POST',
+      body: formData,
+      headers: {
+        Accept: 'application/json', // Aceptar respuesta en JSON
+      },
+    })
+      .then((response) => {
+        if (response.ok) {
+          setEnviado(true); // Marca el formulario como enviado
+          e.target.reset(); // Reinicia el formulario
+        } else {
+          throw new Error('Error en el envío del formulario');
+        }
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+  };
 
-// export const Contacto = () => {
-//   return (
-//     <div className='page'>
-//       <section>
-//         <h1>¡Nos encantaría saber de ti!</h1>
+  const handleArchivoChange = (e) => {
+    setArchivo(e.target.files[0]); // Guarda el archivo seleccionado
+  };
 
-//         <p>
-//           Si tienes alguna sugerencia, comentario o simplemente deseas compartir tu experiencia,
-//           no dudes en escribirnos. Valoramos la opinión de nuestros clientes y estamos siempre 
-//           dispuestos a mejorar.
-//         </p>
+  return (
 
-//         <h1>Proveedores:</h1>
+    <div className="contacto">
+      <h1>Contacto</h1>
+      <p>Déjanos tu mensaje y nos pondremos en contacto contigo a la brevedad posible.</p>
 
-//         <p>Si eres un proveedor interesado en colaborar con nosotros, envíanos tus datos a través 
-//           del formulario que encontrarás a continuación. Estamos en la búsqueda constante de ingredientes 
-//           frescos y de calidad para nuestras pizzas, y nos encantaría conocer más sobre tus productos.
-//         </p>
+      {/* Mensaje de éxito */}
+      {enviado && <p>Tu mensaje ha sido enviado correctamente. Gracias por contactarnos!</p>} 
 
-//         <h1 className='heading'>Contacto</h1>
+      <form onSubmit={handleSubmit}>
+        <div className="form-group">
+          <label htmlFor="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required />
+        </div>
 
-//         <form className='contact'>
+        <div className="form-group">
+          <label htmlFor="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
 
-//           <input type='text' placeholder='Nombre' />
-//           <input type='text' placeholder='Apellidos' />
-//           <input type='text' placeholder='Email' />
-//           <textarea placeholder='Motivo de contacto' />
-//           <input type='submit' value="Enviar" />
-          
-//         </form>
+        <div className="form-group">
+          <label htmlFor="motivo">Motivo de Contacto:</label>
+          <select id="motivo" name="motivo" value={motivo} onChange={(e) => setMotivo(e.target.value)} required>
+            <option value="">Selecciona un motivo</option>
+            <option value="proveedores">Proveedores</option>
+            <option value="quejas">Reclamaciones</option>
+            <option value="cv">Empleo</option>
+          </select>
+        </div>
+        
+        <div className="form-group">
+          <label htmlFor="archivo">Subir archivo:</label>
+          <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx,.png,.jpeg" onChange={handleArchivoChange} required />
+        </div>
 
-//         <p>¡Gracias por ser parte de la familia de La Porcion! Esperamos poder atenderte pronto.</p>
+        <div className="form-group">
+          <label htmlFor="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+        </div>
 
-//       </section>
-      
-//     </div>
-//   )
-// }
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  );
+};
+
+export default Contacto;

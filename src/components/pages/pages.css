@@ -280,38 +280,76 @@ iframe {
 }
 
 /* ---------- ESTILOS PAGINA CONTACTO ----------- */
-/* 
+
 .contacto {
-  margin: 20px;
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center; 
+  width: 100vw; 
+  min-height: 100vh;
+  padding: 15px;
+  margin: 0;
+  background-color: black;
+  color: white;
+}
+
+.contacto h1 {
+  font-size: 24px; /* Tamaño del título */
+  color: #ffffff; /* Color del texto */
+  margin-bottom: 10px; /* Margen inferior */
+}
+
+.contacto p {
+  color: #ffffff; /* Color del texto del párrafo */
+  margin-bottom: 20px; /* Margen inferior */
 }
 
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 15px; /* Espacio entre grupos de formulario */
 }
 
-label {
-  display: block;
-  margin-bottom: 5px;
+.form-group label {
+  display: block; /* Hacer que las etiquetas ocupen toda la línea */
+  font-weight: bold; /* Texto en negrita */
+  margin-bottom: 5px; /* Margen inferior */
+  color: #ff8c00; /* Color del texto */
 }
 
-input, select {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%; /* Ancho completo */
+  padding: 10px; /* Espaciado interno */
+  border: 1px solid #ccc; /* Borde del campo */
+  border-radius: 4px; /* Bordes redondeados */
+  font-size: 16px; /* Tamaño de fuente */
 }
 
-button {
-  background-color: #ff6600;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+.form-group input[type="file"] {
+  border: none; /* Quitar borde para archivos */
 }
 
-button:hover {
-  background-color: #e65c00;
-} */
+.form-group textarea {
+  resize: vertical; /* Permitir solo redimensionar verticalmente */
+}
+
+.contacto button {
+  background-color: #ff6600; /* Color de fondo del botón */
+  color: white; /* Color del texto del botón */
+  border: none; /* Sin borde */
+  padding: 10px 15px; /* Espacio interno */
+  border-radius: 4px; /* Bordes redondeados */
+  font-size: 16px; /* Tamaño de fuente */
+  cursor: pointer; /* Cambiar cursor al pasar sobre el botón */
+  transition: background-color 0.3s ease; /* Transición suave para el color */
+}
+
+.contacto button:hover {
+  background-color: #ff8c00; /* Color de fondo al pasar el ratón */
+}
+
+button:disabled {
+  background-color: #ccc; /* Color de fondo si el botón está deshabilitado */
+  cursor: not-allowed; /* Cursor de prohibido */
+}
