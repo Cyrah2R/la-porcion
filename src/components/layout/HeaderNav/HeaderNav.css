@@ -20,9 +20,13 @@ header {
 .header-button {
     background-color: #ff8c00;
     margin: 3px;
+    padding: 10px 20px;
 
     display: none;
     cursor: pointer;
+    
+    border: 1px solid black;
+    border-radius: 5px;
 }
 
 .header-icon {

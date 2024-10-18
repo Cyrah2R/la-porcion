@@ -1,10 +1,11 @@
-import React from 'react'
+import React from 'react';
+import './legal.css'; 
 
 const Privacy = () => {
 
     return (
 
-        <div>
+        <div className='legal'>
             <h1>Política de Privacidad</h1>
             <p>
                 En La Porcion, respetamos tu privacidad y estamos comprometidos a proteger 

@@ -5,8 +5,8 @@ import Inicio from '../components/pages/Inicio';
 
 import Home from '../components/pages/Home';
 import Carta from '../components/pages/Carta';
-import { Servicios } from '../components/pages/Servicios';
-import { Contacto } from '../components/pages/Contacto';
+import Servicios from '../components/pages/Servicios';
+import Contacto from '../components/pages/Contacto';
 
 import Terms from '../legal/Terms';
 import Privacy from '../legal/Privacy';

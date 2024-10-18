@@ -26,14 +26,14 @@ const Home = () => {
       </div>
 
       <div className='novedades'>
-        <h2>Novedades:</h2>
+        <h3>Novedades:</h3>
         <div className='novedades-container'>
           {novedades.map((novedad, indice) => (
             <div 
               key={novedad.id} 
               className={`novedad ${indice === indiceNovedades ? 'active' : ''}`}
             >
-              <h3>{novedad.title}</h3>
+              <h2>{novedad.title}</h2>
               <p>{novedad.description}</p>
               
               {/*SI QUISIERA AÑADIR IMAGEN EN VEZ DE TITULO Y DESCRIPCION PONER LO SIGUIENTE: */}
@@ -55,7 +55,7 @@ const Home = () => {
       </div>
 
       <div className='fotos-empresa'>
-        <h2>Conócenos:</h2>
+        <h3>Conócenos:</h3>
         <Carrusel limite='' />
       </div>
 

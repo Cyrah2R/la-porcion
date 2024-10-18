@@ -1,10 +1,11 @@
-import React from 'react'
+import React from 'react';
+import './legal.css'; 
 
 const Security = () => {
 
   return (
 
-    <div>
+    <div className='legal'>
         
       <h1>Política de Seguridad</h1>
       <p>

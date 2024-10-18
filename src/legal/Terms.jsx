@@ -1,10 +1,11 @@
 import React from 'react';
+import './legal.css'; 
 
 const Terms = () => {
     
   return (
     
-    <div className="terms-container">
+    <div className='legal'>
         <h1>Términos y Condiciones</h1>
         <p>
             Bienvenido a La Porcion. Al acceder a nuestra web, aceptas cumplir con los siguientes términos y condiciones. 

@@ -1,10 +1,11 @@
-import React from 'react'
+import React from 'react';
+import './legal.css';
 
 const Cookies = () => {
 
     return (
 
-        <div>
+        <div className='legal'>
             <h1>Declaración de Cookies</h1>
             <p>
                 Este sitio web utiliza cookies para mejorar tu experiencia de navegación y ofrecerte 
