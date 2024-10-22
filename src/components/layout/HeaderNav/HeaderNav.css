@@ -1,7 +1,7 @@
 header {
     width: 100vw;
     height: 2rem; 
-    background: #6AB644; /* Gradiente de verde a naranja difuminado */
+    background: var(--green); /* Gradiente de verde a naranja difuminado */
     padding: 0;
 
     display: flex;
@@ -9,32 +9,32 @@ header {
     justify-content: center; /* Centrar todo el contenido horizontalmente */
     align-items: center; /* Alinear verticalmente al centro */
 
-    color: #ffffff;
+    color: var(--text-color);
     font-family: system-ui; 
     font-weight: bold; 
-    text-shadow: 1px 1px #000000; 
+    text-shadow: 1px 1px black; 
 
-    border-bottom: 1px solid #000000; 
+    border-bottom: 0.5px solid white; 
 }
 
 .header-button {
-    background-color: #ff8c00;
+    background-color: var(--orange);
     margin: 3px;
     padding: 10px 20px;
 
     display: none;
     cursor: pointer;
     
-    border: 1px solid black;
+    border: 0.5px solid black;
     border-radius: 5px;
 }
 
-.header-icon {
+/* .header-icon {
     width: 1rem;
     height: 1rem;
 
     fill: #ffffff;
-}
+} */
 
 .header-nav {
     height: 100%;
@@ -61,7 +61,7 @@ header {
 }
 
 .header-NavLink {
-    color: #ffffff;
+    color: var(--text-color);
     text-decoration: none;  /* Quitar el subrayado de los enlaces */
 }
 
@@ -79,18 +79,18 @@ header {
 
     .header-button {
         padding: 2px;
-        background-color: #ff8c00; /* Opcional: si no quieres un fondo */
+        background-color: var(--orange); /* Opcional: si no quieres un fondo */
 
         display: flex;
         align-items: flex-start;
         
-        color: #000000;
-        border-color: #000000;
+        color: var(--background-color);
+        border-color: var(--background-color);
 
     }
 
     .header-nav {
-        background-color: #6AB644;
+        background-color: var(--green);
         opacity: 0;
         
         position: absolute;
@@ -114,7 +114,7 @@ header {
         
         flex-direction: column;
         
-        border: 1px solid #000000;
+        border: 1px solid white;
     }
 
     .header-li {
@@ -128,9 +128,9 @@ header {
         
         display: block;
         
-        color: #ffffff;
+        color: var(--text-color);
         text-decoration: none;
-        border-top: 1px solid #000000;
+        border-top: 1px solid white;
     }
 }
 

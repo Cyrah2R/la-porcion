@@ -7,8 +7,8 @@
   justify-content: center; 
   height: 100vh;
   width: 100vw; 
-  background-color: black;
-  color: white;
+  background-color: var(--background-color);
+  color: var(--text-color);
   overflow: hidden;
 }
 
@@ -29,7 +29,7 @@
   bottom: 20px; 
   text-align: center; 
   transition: opacity 0.5s ease; 
-  color: white;
+  color: var(--text-color);
   opacity: 1;
 }
 
@@ -37,19 +37,19 @@
   background: transparent; 
   border: none; 
   cursor: pointer; 
-  color: white; 
+  color: var(--text-color); 
   font-size: 2rem; 
 }
 
 .inicio-button:hover {
-  color: #ff8c00;
+  color: var(--orange);
   opacity: 0.8;
 }
 
 .inicio h3 {
   margin-top: 10px; 
   font-size: 1.5rem;
-  color: white;
+  color: var(--text-color);
 }
 
 /* ====================================================================== */
@@ -65,8 +65,8 @@
   min-height: 100vh;
   padding: 0;
   margin: 0;
-  background-color: black;
-  color: white;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 .logo {
@@ -83,7 +83,7 @@
 }
 
 .home h3 {
-  color: #ff8c00;
+  color: var(--orange);
   text-align: center;
   margin-bottom: 20px;
 }
@@ -104,7 +104,7 @@
   height: 100px; 
   padding: 5PX;
   
-  background-color: rgb(41, 37, 37);
+  background-color:var(--background-color-2); 
   border: 0.5px solid white; 
   box-sizing: border-box;
   overflow: hidden; 
@@ -113,7 +113,7 @@
 .home h2, .home p{
   text-align: center;
   margin-bottom: 20px;
-  color: white;
+  color: var(--text-color);
 }
 
 .novedad {
@@ -181,8 +181,8 @@
   min-height: 100vh;
   padding: 0;
   margin: 0;
-  background-color: black;
-  color: white;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 .categorias {
@@ -192,8 +192,8 @@
 }
 
 .categorias button {
-  background-color: #ff8c00;
-  color: white;
+  background-color: var(--orange);
+  color: var(--text-color);
   border: none;
   padding: 10px;
   margin: 0 5px;
@@ -201,7 +201,7 @@
 }
 
 .categorias button:hover {
-  background-color: #ff8c00a0;
+  background-color: var(--orange-hover);
 }
 
 .items-container {
@@ -213,10 +213,12 @@
 .item {
   margin: 10px 0;
   text-align: center;
-  border: 1px solid white;
+  border: 0.5px solid white;
   padding: 10px;
   width: 100%;
 }
+
+/* ====================================================================== */
 
 /* ---------- ESTILOS PAGINA SERVICIOS ----------- */
 
@@ -229,34 +231,59 @@
   min-height: 100vh;
   padding: 0;
   margin: 0;
-  background-color: black;
-  color: white;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
-.servicios h3, .servicios a {
-  color: #ff8c00;
-  text-decoration: none;
+.horario {
+  text-align: center;
 }
 
-.servicios h2, .servicios p {
-  color: #ffffff;
+.horario h2 {
+  font-size: 24px;
+  color: var(--orange);
 }
 
-.servicio {
+.horario p {
+  font-size: 18px;
+}
+
+.servicios-contenido {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.servicios-contenido h2 {
+  font-size: 24px;
+  color: var(--orange);
+}
+
+.servicios-columnas {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; 
-  margin-bottom: 40px;
+  justify-content: space-between;
+  max-width: 90%;
+  gap: 10px;
+  margin: 0 auto;
+  margin-top: 20px; 
 }
 
-iframe {
-  border-radius: 10px;
+.servicios-columna {
+  flex: 1;
+  padding: 20px;
+  background-color: var(--orange-2);
+  border-radius: 8px;
 }
 
-.btn-oidokocina {
-  background-color: #ff6600;
-  color: white;
+.recoger h3, .domicilio h3 {
+  font-size: 20px;
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+.recoger a, .btn-oidokocina {
+  background-color: var(--orange);
+  color: var(--text-color);
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -264,20 +291,48 @@ iframe {
   text-decoration: none;
 }
 
-.btn-oidokocina:hover {
-  background-color:#ff8c00;
+.recoger a:hover, .btn-oidokocina:hover {
+  background-color: var(--orange-hover)
+}
+
+iframe {
+  border-radius: 10px;
+  max-width: 90%;
+}
+
+.ubicacion {
+  text-align: center;
+  max-width: 90%;
+}
+
+.ubicacion h3 {
+  font-size: 24px;
+  color: var(--orange);
+}
+
+.redes {
+  text-align: center;
+  max-width: 90%;
+  margin: 10px;
+}
+
+.redes h3 {
+  font-size: 24px;
+  color: var(--orange);
 }
 
 .socialmedia a {
   margin-right: 10px;
-  color: #ff6600;
+  color: var(--orange);
   text-decoration: none;
 }
 
 .socialmedia a:hover {
-  color:#ff8c00;
+  color: var(--orange);
   text-decoration: underline;
 }
+
+/* ====================================================================== */
 
 /* ---------- ESTILOS PAGINA CONTACTO ----------- */
 
@@ -290,66 +345,66 @@ iframe {
   min-height: 100vh;
   padding: 15px;
   margin: 0;
-  background-color: black;
-  color: white;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 .contacto h1 {
-  font-size: 24px; /* Tamaño del título */
-  color: #ffffff; /* Color del texto */
-  margin-bottom: 10px; /* Margen inferior */
+  font-size: 24px; 
+  color: var(--text-color);
+  margin-bottom: 10px; 
 }
 
 .contacto p {
-  color: #ffffff; /* Color del texto del párrafo */
-  margin-bottom: 20px; /* Margen inferior */
+  color: var(--text-color); 
+  margin-bottom: 20px; 
 }
 
 .form-group {
-  margin-bottom: 15px; /* Espacio entre grupos de formulario */
+  margin-bottom: 15px; 
 }
 
 .form-group label {
-  display: block; /* Hacer que las etiquetas ocupen toda la línea */
-  font-weight: bold; /* Texto en negrita */
-  margin-bottom: 5px; /* Margen inferior */
-  color: #ff8c00; /* Color del texto */
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px; 
+  color: var(--orange);
 }
 
 .form-group input,
 .form-group select,
 .form-group textarea {
-  width: 100%; /* Ancho completo */
-  padding: 10px; /* Espaciado interno */
-  border: 1px solid #ccc; /* Borde del campo */
+  width: 100%;
+  padding: 10px; 
+  border: 1px solid grey; 
   border-radius: 4px; /* Bordes redondeados */
   font-size: 16px; /* Tamaño de fuente */
 }
 
 .form-group input[type="file"] {
-  border: none; /* Quitar borde para archivos */
+  border: none;
 }
 
 .form-group textarea {
-  resize: vertical; /* Permitir solo redimensionar verticalmente */
+  resize: vertical;
 }
 
 .contacto button {
-  background-color: #ff6600; /* Color de fondo del botón */
-  color: white; /* Color del texto del botón */
-  border: none; /* Sin borde */
-  padding: 10px 15px; /* Espacio interno */
-  border-radius: 4px; /* Bordes redondeados */
-  font-size: 16px; /* Tamaño de fuente */
-  cursor: pointer; /* Cambiar cursor al pasar sobre el botón */
-  transition: background-color 0.3s ease; /* Transición suave para el color */
+  background-color: var(--orange-2);
+  color: var(--text-color); 
+  border: none; 
+  padding: 10px 15px; 
+  border-radius: 4px;
+  font-size: 16px; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease; 
 }
 
 .contacto button:hover {
-  background-color: #ff8c00; /* Color de fondo al pasar el ratón */
+  background-color: var(--orange-hover);
 }
 
 button:disabled {
-  background-color: #ccc; /* Color de fondo si el botón está deshabilitado */
-  cursor: not-allowed; /* Cursor de prohibido */
+  background-color: darkgrey; 
+  cursor: not-allowed;
 }

@@ -1,19 +1,30 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* index.css */
+
+:root {
+  --background-color: #111111;
+  --background-color-2: #252525;
+  --text-color: #ffffff;
+  --orange: #ff8c00;
+  --orange-2: #E3702A;
+  --orange-hover: #ff8c00bb; 
+  --green: #6EB743;
+  --green-2: #6EB743;
+  --green-hover: #6eb74377; 
+  --text-color-h2: #333333; /* Color para los H2 */
+  --text-color-p: #666666;  /* Color para los párrafos */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Estilos generales aplicados a toda la web */
+body {
+  margin: 0;
+  background-color: var(--background-color);
+  font-family: system-ui;
+  color: var(--text-color-p); /* Color de texto por defecto */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .layout {
   width: 85%;
   height: 0 auto;
 }
-
