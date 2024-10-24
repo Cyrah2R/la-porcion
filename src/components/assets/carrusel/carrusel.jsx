@@ -16,7 +16,7 @@ const Carrusel = () => {
   return (
     <div className='carrusel'>
       <div className='contenedor-fotos'>
-        <img src={require(`../images/${fotos[id].id}.jpg`)} alt={`foto ${id + 1}`} />
+        <img src={require(`../images/${fotos[id].id}.png`)} alt={`foto ${id + 1}`} />
       </div>
 
       <div className='flechas-contenedor'>
