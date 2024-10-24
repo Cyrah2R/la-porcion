@@ -37,6 +37,11 @@ const Carta = () => {
 
   return (
     <div className="carta">
+
+      <div className="logo">
+        <img src={require('../assets/images/logo-home.png')} alt="Logo" />
+      </div>
+      
       <h2>Nuestra Carta</h2>
       <div className="categorias">
         <button onClick={() => handleCategoriaChange('pizzas')}>Pizzas</button>

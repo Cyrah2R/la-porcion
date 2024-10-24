@@ -21,27 +21,32 @@ const Home = () => {
 
     <div className='home'>
 
-      <div className="logo">
-        <img src={require('../assets/images/logo-home.png')} alt="Logo" />
-      </div>
-
       <div className='novedades'>
-        <h3>Novedades:</h3>
+        {/* <h3>Novedades:</h3> */}
         
         <div className='novedades-container'>
           {novedades.map((novedad, indice) => (
             <div 
-              key={novedad.id} 
+              key={novedad.id || indice} // Usar el id o el índice como fallback si no hay id único.
               className={`novedad ${indice === indiceNovedades ? 'active' : ''}`}
             >
-              <h2>{novedad.title}</h2>
-              <p>{novedad.description}</p>
-              
+              {/*SI QUISIERA AÑADIR TITULO Y DESCRIPCION EN VEZ DE IMAGEN PONER LO SIGUIENTE: */}
+              {/* <h2>{novedad.title}</h2>
+              <p>{novedad.description}</p> */}
+
               {/*SI QUISIERA AÑADIR IMAGEN EN VEZ DE TITULO Y DESCRIPCION PONER LO SIGUIENTE: */}
-              {/* <img src={novedad.image} alt={novedad.title} style={{ width: '100%', height: 'auto' }} /> */}
+              <img src={novedad.image} alt={novedad.title} />
             </div>
+          
           ))}
         </div>
+      </div>
+
+      <hr className='hr' />
+
+      <div className='fotos-empresa'>
+        <h3>Conócenos:</h3>
+        <Carrusel limite='' />
       </div>
 
       <hr className='hr' />
@@ -56,14 +61,6 @@ const Home = () => {
           style={{ width: '95%', height: '300px' }} // Ajusta el tamaño según necesites
         />
       </div>
-
-      <hr className='hr' />
-
-      <div className='fotos-empresa'>
-        <h3>Conócenos:</h3>
-        <Carrusel limite='' />
-      </div>
-
     </div>
   )
 };

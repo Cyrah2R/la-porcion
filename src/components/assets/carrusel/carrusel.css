@@ -9,15 +9,19 @@
 
 .contenedor-fotos {
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
     width: 100%;
-    position: relative;
+    max-width: 600px; /* Mantiene el ancho máximo */
+    height: 400px; /* Establece una altura fija */
+    overflow: hidden;
 }
 
 .contenedor-fotos img {
-    max-width: 100%; 
-    height: auto;
+    width: 100%; /* Hace que la imagen ocupe todo el ancho del contenedor */
+    height: 100%; /* Hace que la imagen ocupe toda la altura del contenedor */
+    object-fit: cover; /* Ajusta la imagen sin deformarla, recortando si es necesario */
     display: block;
     margin: 0 auto;
 }
@@ -45,9 +49,14 @@
 
 /* Responsive: Para móviles */
 @media (max-width: 768px) {
+    .contenedor-fotos {
+        height: 250px; /* Reduce la altura del contenedor en móviles */
+    }
+
     .contenedor-fotos img {
         max-width: 100%; /* Se ajusta al ancho de la pantalla */
-        height: auto; /* Mantiene la proporción */
+        height: 100%; /* Mantiene la altura del contenedor */
+        object-fit: cover; /* Asegura que la imagen se ajuste bien */
     }
 
     .flecha {
