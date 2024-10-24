@@ -6,10 +6,10 @@
   align-items: center; 
   justify-content: center; 
   height: 100vh;
-  width: 100vw; 
+  width: 100vw;
   background-color: var(--background-color);
   color: var(--text-color);
-  overflow: hidden;
+  position: relative; /* Cambiado para que el icono se posicione relativo a este contenedor */
 }
 
 .video-container {
@@ -21,16 +21,18 @@
 
 .responsive-video {
   width: 100%; 
-  height: auto; 
+  height: 100%; /* Cambiado a 100% para llenar todo el contenedor */
+  object-fit: cover; /* Asegura que el video se ajuste correctamente sin deformarse */
 }
 
 .icon-container {
   position: absolute; 
-  bottom: 20px; 
+  bottom: 10%; /* Ajusta el icono para que esté más arriba en pantallas pequeñas */
   text-align: center; 
   transition: opacity 0.5s ease; 
   color: var(--text-color);
   opacity: 1;
+  width: 100%;
 }
 
 .inicio-button {
@@ -69,6 +71,12 @@
   color: var(--text-color);
 }
 
+.home h3 {
+  color: var(--orange);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 .logo {
   width: 100%; 
   text-align: center;
@@ -82,10 +90,11 @@
   margin: 0 auto;
 }
 
-.home h3 {
-  color: var(--orange);
-  text-align: center;
-  margin-bottom: 20px;
+.hr {
+  border: none; /* Elimina cualquier borde predeterminado */
+  border-top: 0.5px solid #ffffff; /* Línea fina de 0.5px de color blanco */
+  margin-top: 20px; /* Margen superior de 10px */
+  width: 100%; /* Se extiende a todo el ancho */
 }
 
 .novedades {
@@ -97,6 +106,7 @@
 
 .novedades-container {
   display: flex;
+  flex: 1;
   position: relative;
   align-items: center;
   justify-content: center; 
@@ -104,9 +114,10 @@
   height: 100px; 
   padding: 5PX;
   
-  background-color:var(--background-color-2); 
+  background-color: var(--orange-2);
   border: 0.5px solid white; 
   box-sizing: border-box;
+  border-radius: 8px;
   overflow: hidden; 
 }
 

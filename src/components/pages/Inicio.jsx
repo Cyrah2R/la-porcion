@@ -25,7 +25,7 @@ const Inicio = () => {
   const handleDoorClick = () => {
     navigate('/home');
   };
-
+  
   return (
     <div className='inicio'>
       <div className='video-container'>

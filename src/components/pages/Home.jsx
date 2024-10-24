@@ -22,11 +22,12 @@ const Home = () => {
     <div className='home'>
 
       <div className="logo">
-        <img src={require('../assets/images/logo-header.png')} alt="Logo" />
+        <img src={require('../assets/images/logo-home.png')} alt="Logo" />
       </div>
 
       <div className='novedades'>
         <h3>Novedades:</h3>
+        
         <div className='novedades-container'>
           {novedades.map((novedad, indice) => (
             <div 
@@ -43,6 +44,8 @@ const Home = () => {
         </div>
       </div>
 
+      <hr className='hr' />
+
       <div className='video-container'>
         <video 
           src={videoSrc} 
@@ -53,6 +56,8 @@ const Home = () => {
           style={{ width: '95%', height: '300px' }} // Ajusta el tamaño según necesites
         />
       </div>
+
+      <hr className='hr' />
 
       <div className='fotos-empresa'>
         <h3>Conócenos:</h3>
