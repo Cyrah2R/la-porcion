@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const Contacto = () => {
   const [motivo, setMotivo] = useState('');
-  const [archivo, setArchivo] = useState(null);
+  // const [archivo, setArchivo] = useState(null);
   const [enviado, setEnviado] = useState(false); // Estado para manejar el mensaje de éxito
 
   const handleSubmit = (e) => {
