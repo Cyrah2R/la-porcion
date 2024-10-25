@@ -1,0 +1,66 @@
+.carrusel {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedor-fotos {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 600px; /* Mantiene el ancho máximo */
+    height: 400px; /* Establece una altura fija */
+    overflow: hidden;
+}
+
+.contenedor-fotos img {
+    width: 100%; /* Hace que la imagen ocupe todo el ancho del contenedor */
+    height: 100%; /* Hace que la imagen ocupe toda la altura del contenedor */
+    object-fit: cover; /* Ajusta la imagen sin deformarla, recortando si es necesario */
+    display: block;
+    margin: 0 auto;
+}
+
+.flechas-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.flecha {
+    background-color: #ff8c00;
+    color: #ffffff;
+    border: solid 1px #ffffff;
+    font-size: 1rem;
+    padding: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.flecha:hover {
+    background-color: #ff8c00a0;
+}
+
+/* Responsive: Para móviles */
+@media (max-width: 768px) {
+    .contenedor-fotos {
+        height: 250px; /* Reduce la altura del contenedor en móviles */
+    }
+
+    .contenedor-fotos img {
+        max-width: 100%; /* Se ajusta al ancho de la pantalla */
+        height: 100%; /* Mantiene la altura del contenedor */
+        object-fit: cover; /* Asegura que la imagen se ajuste bien */
+    }
+
+    .flecha {
+        font-size: 1.5rem; /* Reduce el tamaño de las flechas en pantallas pequeñas */
+        padding: 8px;
+    }
+}
