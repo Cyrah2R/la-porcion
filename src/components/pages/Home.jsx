@@ -57,6 +57,7 @@ const Home = () => {
           autoPlay 
           loop 
           muted 
+          playsInline
           className='video'
           style={{ width: '95%', height: '300px' }} // Ajusta el tamaño según necesites
         />

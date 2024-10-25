@@ -34,6 +34,7 @@ const Inicio = () => {
           className='responsive-video'
           autoPlay 
           muted
+          playsInline
           onEnded={(e) => e.target.pause()}
         >
           <source src={require('../assets/videos/logo_inicio.mp4')} type="video/mp4" />
