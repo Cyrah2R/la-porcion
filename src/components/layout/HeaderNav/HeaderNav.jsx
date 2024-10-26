@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import Icono from '../../assets/iconos';
-import logo from '../../assets/images/logo-menu.png';
+// import logo from '../../assets/images/logo-menu.png';
 import './headerNav.css';
 
 export const HeaderNav = () => {
@@ -24,11 +24,6 @@ export const HeaderNav = () => {
         <Icono nombre='hamburguesa' />
       </button>
       
-      {!menu && (
-        <div className='logo-container'>
-          <img src={logo} alt="Logo" className='header-logo' />
-        </div>
-      )}
         
       <nav className={`header-nav ${menu ? 'menu' : ''}`}>
         <ul className='header-ul'>

@@ -1,17 +1,23 @@
 /* index.css */
 
 :root {
+  
   --background-color: #111111;
   --background-color-2: #252525;
+  --fondo-semitransparente: rgba(0, 0, 0, 0.5);
+
   --text-color: #ffffff;
+  --text-color-h2: #333333; /* Color para los H2 */
+  --text-color-p: #666666;  /* Color para los párrafos */
+
   --orange: #ff8c00;
   --orange-2: #E3702A;
   --orange-hover: #ff8c00bb; 
+
   --green: #6EB743;
   --green-2: #6EB743;
   --green-hover: #6eb74377; 
-  --text-color-h2: #333333; /* Color para los H2 */
-  --text-color-p: #666666;  /* Color para los párrafos */
+  
 }
 
 /* Estilos generales aplicados a toda la web */

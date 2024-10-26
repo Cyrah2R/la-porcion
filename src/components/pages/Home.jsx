@@ -1,69 +1,79 @@
-import React, { useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import { novedades } from '../data/novedades';
-import Carrusel from '../assets/carrusel/carrusel';
+import { fotos } from '../data/fotos';
 import videoSrc from '../assets/videos/home_bienvenida.mp4';
 import './pages.css';
 
 const Home = () => {
-
-  // NOVEDADES: Cambia la noticia cada 5 segundos
-  const [indiceNovedades, setIndiceNovedades] = useState(0); // Estado para el índice de noticias
+  const [indiceNovedades, setIndiceNovedades] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setIndiceNovedades((prevIndex) => (prevIndex + 1) % novedades.length);
-    }, 5000); // 5000 ms = 5 segundos
+    }, 3000); 
 
-    return () => clearInterval(interval); // Limpiar el intervalo al desmontar
+    return () => clearInterval(interval); 
+  }, []);
+
+  const [indiceFoto, setIndiceFoto] = useState(0); 
+
+  useEffect(() => {
+    const intervalFotos = setInterval(() => {
+      setIndiceFoto((prevIndex) => (prevIndex + 1) % fotos.length);
+    }, 5000); 
+
+    return () => clearInterval(intervalFotos); 
   }, []);
 
   return (
+    <div className="home">
 
-    <div className='home'>
+      {/* SECCION 1 */}
+      <section className="section-novedades">
 
-      <div className='novedades'>
-        {/* <h3>Novedades:</h3> */}
-        
-        <div className='novedades-container'>
-          {novedades.map((novedad, indice) => (
-            <div 
-              key={novedad.id || indice} // Usar el id o el índice como fallback si no hay id único.
-              className={`novedad ${indice === indiceNovedades ? 'active' : ''}`}
-            >
-              {/*SI QUISIERA AÑADIR TITULO Y DESCRIPCION EN VEZ DE IMAGEN PONER LO SIGUIENTE: */}
-              {/* <h2>{novedad.title}</h2>
-              <p>{novedad.description}</p> */}
-
-              {/*SI QUISIERA AÑADIR IMAGEN EN VEZ DE TITULO Y DESCRIPCION PONER LO SIGUIENTE: */}
-              <img src={novedad.image} alt={novedad.title} />
-            </div>
-          
-          ))}
+        <div className="novedades-content">
+          <div className="carrusel">
+            <img
+              src={novedades[indiceNovedades].image}
+              alt={novedades[indiceNovedades].title}
+              className="carrusel-imagen"
+            />
+          </div>
         </div>
-      </div>
 
-      <hr className='hr' />
+      </section>
 
-      <div className='fotos-empresa'>
-        <h3>Conócenos:</h3>
-        <Carrusel limite='' />
-      </div>
+      {/* SECCION 2 */}
+      <section className="section-video">
 
-      <hr className='hr' />
-
-      <div className='video-container'>
         <video 
           src={videoSrc} 
           autoPlay 
           loop 
           muted 
-          playsInline
-          className='video'
-          style={{ width: '95%', height: '300px' }} // Ajusta el tamaño según necesites
-        />
-      </div>
+          playsInline 
+          className="video" />
+          
+      </section>
+
+      {/* SECCION 3 */}
+      <section className="section-conocenos">
+
+        <div className="fotos-content">
+          <h3>Conocenos:</h3>
+          <div className="carrusel">
+            <img
+              src={require(`../assets/images/${fotos[indiceFoto].id}.png`)} // Asegúrate de que esta ruta sea correcta
+              alt={fotos[indiceFoto].nombre} 
+              className="carrusel-imagen"
+            />
+          </div>
+        </div>
+
+      </section>
+
     </div>
-  )
+  );
 };
 
 export default Home;
