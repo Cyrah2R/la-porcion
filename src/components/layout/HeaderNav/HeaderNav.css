@@ -93,6 +93,7 @@ header {
         
         color: var(--background-color);
         border-color: var(--background-color);
+
     }
 
     .header-nav {
