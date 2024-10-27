@@ -25,6 +25,7 @@ const Home = () => {
     return () => clearInterval(intervalFotos); 
   }, []);
 
+  
   return (
     <div className="home">
 
