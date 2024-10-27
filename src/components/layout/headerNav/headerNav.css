@@ -29,12 +29,19 @@ header {
     border-radius: 5px;
 }
 
-/* .header-icon {
-    width: 1rem;
-    height: 1rem;
-
-    fill: #ffffff;
-} */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Alinea verticalmente el logo */
+    margin: 0; /* Ajustar según necesites */
+    flex-grow: 1; /* Permitir que el logo ocupe espacio */
+}
+  
+.header-logo {
+    max-width: 100%; /* Asegura que el logo sea responsive */
+    height: auto; /* Mantiene la proporción */
+    max-height: 50px; /* Ajusta la altura máxima según lo necesites */
+}
 
 .header-nav {
     height: 100%;
