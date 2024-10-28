@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { novedades } from '../data/novedades';
 import { fotos } from '../data/fotos';
-import videoSrc from '../assets/videos/home_bienvenida.mp4';
+import videoSrc from '../assets/videos/home-bienvenida.mp4';
 import './pages.css';
 
 const Home = () => {
@@ -61,7 +61,6 @@ const Home = () => {
       <section className="section-conocenos">
 
         <div className="fotos-content">
-          <h3>Conocenos:</h3>
           <div className="carrusel">
             <img
               src={require(`../assets/images/${fotos[indiceFoto].id}.png`)} // Asegúrate de que esta ruta sea correcta
