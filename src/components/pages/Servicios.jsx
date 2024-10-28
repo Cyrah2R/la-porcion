@@ -68,7 +68,7 @@ const Servicios = () => {
         <h3>Síguenos en redes sociales</h3>
         <p>Mantente al tanto de nuestras promociones y novedades siguiéndonos en redes sociales.</p>
         <div className="socialmedia">
-          <a href='https://instagram.com' target='_blank' rel='noopener noreferrer'>
+          <a href='https://www.instagram.com/pizzerialaporcion/' target='_blank' rel='noopener noreferrer'>
             <Icono nombre='instagram' className='footer-icons' /> Instagram
           </a>
           <a href='https://facebook.com' target='_blank' rel='noopener noreferrer'>
