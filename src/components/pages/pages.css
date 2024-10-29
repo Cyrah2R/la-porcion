@@ -140,9 +140,15 @@ h3 {
   border-radius: 2px;
 }
 
-/* ====================================================================== */
 
-/* ---------- ESTILOS PAGINA CARTA ----------- */
+
+
+
+
+
+
+
+
 
 .carta {
   display: flex;
@@ -153,55 +159,87 @@ h3 {
   min-height: 100vh;
   padding: 0;
   margin: 0;
-  background-color: var(--background-color);
-  color: var(--text-color);
-}
-
-.logo {
-  width: 100%; 
-  text-align: center;
-  padding: 20px;
-}
-
-.logo img {
-  max-width: 90%; 
-  height: auto; 
-  display: block; 
-  margin: 0 auto;
+  background-color: white; /* Cambiar fondo a blanco */
+  color: black; /* Cambiar letras a negro */
 }
 
 .categorias {
   display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
+  flex-direction: column; /* Cambiar a columna */
+  margin-bottom: 0;
+  width: 90%;
 }
 
 .categorias button {
+  display: flex; /* Usar flexbox para el botón */
+  justify-content: space-between; /* Espacio entre el texto y el icono */
+  align-items: center; /* Centrar verticalmente el contenido */
   background-color: var(--orange);
-  color: var(--text-color);
-  border: none;
-  padding: 10px;
-  margin: 0 5px;
+  color: black; /* Cambiar letras a negro */
+  border: 1px solid black; /* Borde negro */
+  padding: 10px 20px;
+  margin: 0; /* Eliminar espacio entre botones */
   cursor: pointer;
+  width: 100%; /* Ajustar ancho al contenedor */
+  height: 50px; /* Ajustar altura a un tamaño fijo */
+  box-sizing: border-box; /* Incluir borde y padding en el tamaño total */
+  text-align: left; /* Alinear texto a la izquierda */
+  padding-left: 20px; /* Espacio izquierdo para el texto */
 }
 
 .categorias button:hover {
   background-color: var(--orange-hover);
 }
 
-.items-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.flechaD-icon {
+  margin-left: 30px; /* Espacio entre el texto y el icono */
 }
 
-.item {
-  margin: 10px 0;
-  text-align: center;
-  border: 0.5px solid white;
-  padding: 10px;
+.subcategorias {
+  overflow: hidden; /* Oculta el contenido que excede el contenedor */
+  transition: max-height 1s ease; /* Transición suave */
+  max-height: 0; /* Oculto por defecto */
   width: 100%;
 }
+
+.subcategorias.open {
+  max-height: 200px; /* Ajusta esto según sea necesario para mostrar el contenido */
+}
+
+.items-container {
+  overflow: hidden; /* Oculta el contenido que excede el contenedor */
+  transition: max-height 1s ease; /* Transición suave */
+  max-height: 0; /* Oculto por defecto */
+  width: 100%;
+}
+
+.items-container.open {
+  max-height: 500px; /* Ajusta esto según sea necesario para mostrar el contenido */
+}
+
+.items-table {
+  width: 100%;
+  border-collapse: collapse; /* Eliminar espacios entre celdas */
+  margin-top: 0; /* Espacio entre subcategorías y tabla */
+}
+
+.items-table th, .items-table td {
+  border: 1px solid black; /* Borde negro */
+  padding: 8px;
+  text-align: left;
+}
+
+.items-table th {
+  background-color: var(--orange); /* Fondo naranja para encabezados */
+  color: black; /* Letras en negro */
+}
+
+
+
+
+
+
+
 
 /* ====================================================================== */
 
