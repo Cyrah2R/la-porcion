@@ -1,17 +1,28 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# dependencies
+# Firebase y configuraciones locales
+.firebase
+.github/*
+
+# Production
+/build
+
+# Dependencies
 /node_modules
 /.pnp
 .pnp.js
 
-# testing
+# Testing
 /coverage
 
-# production
-/build
+# Imágenes y videos
+/src/assets/images/
+/src/assets/videos/
 
-# misc
+# Archivos varios
+/src/cosasporhacer.txt
+
+# Misc
 .DS_Store
 .env.local
 .env.development.local
