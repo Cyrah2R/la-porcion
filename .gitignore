@@ -1,8 +1,8 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # Firebase y configuraciones locales
-.firebase
-.github/*
+/.firebase
+/.github
 
 # Production
 /build
@@ -20,7 +20,7 @@
 /src/assets/videos/
 
 # Archivos varios
-/src/cosasporhacer.txt
+/cosasporhacer.txt
 
 # Misc
 .DS_Store
