@@ -29,7 +29,7 @@ const Carta = () => {
     if (categoria === 'pizzas') {
       return (
         <div className={`subcategorias ${categoria ? 'open' : ''}`}>
-          {['tomate', 'bbq', 'nata', 'bbq-creme', 'kebab'].map((item) => (
+          {['Tomate', 'BBQ', 'Nata', 'BBQ-Creme', 'Kebab'].map((item) => (
             <div key={item}>
               <button onClick={() => handleSubcategoriaChange(item)}>
                 {item.charAt(0).toUpperCase() + item.slice(1)}
@@ -47,7 +47,9 @@ const Carta = () => {
   };
 
   const renderItems = (subcategoria) => {
+
     const pizzasFiltradas = Pizzas.filter(pizza => pizza.base === subcategoria);
+    
     return (
       <table className="items-table">
         <thead>
@@ -63,7 +65,7 @@ const Carta = () => {
           {pizzasFiltradas.map((pizza) => (
             <tr key={pizza.id}>
               <td>{pizza.name}</td>
-              <td>{pizza.description}</td>
+              <td>{pizza.ingredientes}</td>
               <td>{pizza.precioChapata}</td>
               <td>{pizza.precioMediana}</td>
               <td>{pizza.precioFamiliar}</td>
@@ -76,24 +78,29 @@ const Carta = () => {
 
   return (
     <div className="carta">
-      <div className="logo">
-        <img src="ruta/a/tu/logo.png" alt="La Porción" />
+
+      <div className="logo-container">
+        <img src={require('../assets/images/logo-laporcion-blanco.png')} className='logo' alt="La Porción" />
       </div>
 
-      <Link to="/servicios">¡Haz tu pedido!</Link>
+      <Link to="/servicios" className='link'>¡Haz tu pedido!</Link>
 
       <h2>Nuestra Carta</h2>
 
       <div className="categorias">
+
         {categorias.map((cat) => (
           <div key={cat.key}>
+            
             <button onClick={() => handleCategoriaChange(cat.key)}>
               {cat.nombre}
               <Icono nombre='flechaD' className='flechaD-icon' />
             </button>
+
             <div className={`subcategorias ${categoria === cat.key ? 'open' : ''}`}>
               {categoria === cat.key && renderSubcategorias()}
             </div>
+          
           </div>
         ))}
       </div>

@@ -71,9 +71,11 @@
   margin: 0;
 }
 
-h3 {
+h3, p {
+  font-family: system-ui;
   text-align: center; /* Centra el texto */
-  color: var(--orange); /* Cambia el color del texto a naranja */
+  color: var(--text-color); /* Cambia el color del texto a naranja */
+  margin: 10px;
 }
 
 .section-novedades {
@@ -85,7 +87,6 @@ h3 {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  border-radius: 2px;
 }
 
 .novedades-content {
@@ -118,16 +119,14 @@ h3 {
 
 .section-video {
   width: 100%; /* Ancho total de la ventana */
-  padding: 30px 0; /* Margen superior e inferior */
+  padding: 0; /* Margen superior e inferior */
   color: var(--text-color); /* Color del texto */
   background-color: var(--orange); /* Fondo semitransparente */
-  border-radius: 2px; /* Bordes redondeados */
 }
 
 .video {
   width: 100%; /* Ajusta el ancho del video al 100% del contenedor */
   height: auto; /* Mantiene la proporción del video */
-  border-radius: 8px; /* Bordes redondeados */
 }
 
 .section-conocenos {
@@ -137,10 +136,11 @@ h3 {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  border-radius: 2px;
 }
 
+/* ====================================================================== */
 
+/* ---------- ESTILOS PAGINA CARTA ----------- */
 
 
 
@@ -161,6 +161,25 @@ h3 {
   margin: 0;
   background-color: white; /* Cambiar fondo a blanco */
   color: black; /* Cambiar letras a negro */
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column; /* Cambiar a columna */
+  margin-bottom: 0;
+  width: 100%;
+
+}
+
+.logo {
+  width: 100%;
+  height: 200px;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--orange);
+  font-size: x-large;
 }
 
 .categorias {
@@ -199,11 +218,12 @@ h3 {
   overflow: hidden; /* Oculta el contenido que excede el contenedor */
   transition: max-height 1s ease; /* Transición suave */
   max-height: 0; /* Oculto por defecto */
-  width: 100%;
+  width: auto;
+  padding-left: 10px;
 }
 
 .subcategorias.open {
-  max-height: 200px; /* Ajusta esto según sea necesario para mostrar el contenido */
+  max-height: 1000px; /* Ajusta esto según sea necesario para mostrar el contenido */
 }
 
 .items-container {

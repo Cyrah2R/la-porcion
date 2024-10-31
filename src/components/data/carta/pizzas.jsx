@@ -1,30 +1,30 @@
 export const Pizzas = [
 
   /* SALSA TOMATE Y MOZZARELLA */
-  { id: 1, name: 'Margarita', description: 'Salsa de tomate, Mozzarella', base: 'tomate', precioChapata: 3.50, precioMediana: 6.00, precioFamiliar: 12.00 },
-  { id: 2, name: 'Atureña', description: 'Atún, Jamón York', base: 'tomate', precioChapata: 4.40, precioMediana: 9.00, precioFamiliar: 16.90 },
-  { id: 3, name: 'Ricky', description: 'Carne Burguer Ricky', base: 'tomate', precioChapata: 4.40, precioMediana: 9.00, precioFamiliar: 16.90 },
-  { id: 4, name: 'Tropical', description: 'Piña, Jamón York', base: 'tomate', precioChapata: 4.40, precioMediana: 9.00, precioFamiliar: 16.90 },
-  { id: 5, name: 'Kebab', description: 'Carne de Kebab, Salsa Kebab', base: 'tomate', precioChapata: 4.90, precioMediana: 9.00, precioFamiliar: 18.90 },
-  { id: 6, name: 'Mediterránea', description: 'Jamón York, Queso de cabra, Tomate natural', base: 'tomate', precioChapata: 4.90, precioMediana: 10.50, precioFamiliar: 18.90 },
-  { id: 7, name: 'Napolitana', description: 'Champiñones, Bacon, Jamon York',base: 'tomate', precioChapata: 4.90, precioMediana: 10.50, precioFamiliar: 18.90 },
-  { id: 8, name: 'Cha-Pi-Tun', description: 'Champiñones, Pimiento Rojo, Atun', base: 'tomate', precioChapata: 4.90, precioMediana: 10.50, precioFamiliar: 18.90 },
-  { id: 9, name: '5 Quesos', description: 'Mezcla de 5 Quesos', base: 'tomate', precioChapata: 4.90, precioMediana: 10.50, precioFamiliar: 18.90 },
+  { id: 1, name: 'Margarita', ingredientes: 'Salsa de tomate, Mozzarella', base: 'Tomate', precioChapata: 3.50, precioMediana: 6.00, precioFamiliar: 12.00 },
+  { id: 2, name: 'Atureña', ingredientes: 'Atún, Jamón York', base: 'Tomate', precioChapata: 4.40, precioMediana: 9.00, precioFamiliar: 16.90 },
+  { id: 3, name: 'Ricky', ingredientes: 'Carne Burguer Ricky', base: 'Tomate', precioChapata: 4.40, precioMediana: 9.00, precioFamiliar: 16.90 },
+  { id: 4, name: 'Tropical', ingredientes: 'Piña, Jamón York', base: 'Tomate', precioChapata: 4.40, precioMediana: 9.00, precioFamiliar: 16.90 },
+  { id: 5, name: 'Kebab', ingredientes: 'Carne de Kebab, Salsa Kebab', base: 'Tomate', precioChapata: 4.90, precioMediana: 9.00, precioFamiliar: 18.90 },
+  { id: 6, name: 'Mediterránea', ingredientes: 'Jamón York, Queso de cabra, Tomate natural', base: 'Tomate', precioChapata: 4.90, precioMediana: 10.50, precioFamiliar: 18.90 },
+  { id: 7, name: 'Napolitana', ingredientes: 'Champiñones, Bacon, Jamon York',base: 'Tomate', precioChapata: 4.90, precioMediana: 10.50, precioFamiliar: 18.90 },
+  { id: 8, name: 'Cha-Pi-Tun', ingredientes: 'Champiñones, Pimiento Rojo, Atun', base: 'Tomate', precioChapata: 4.90, precioMediana: 10.50, precioFamiliar: 18.90 },
+  { id: 9, name: '5 Quesos', ingredientes: 'Mezcla de 5 Quesos', base: 'Tomate', precioChapata: 4.90, precioMediana: 10.50, precioFamiliar: 18.90 },
 
   /* SALSA BBQ */
-  { id: 10, name: 'Ricky BBQ', description: 'Carne Burguer Ricky', base: 'bbq', precioChapata: 4.40, precioMediana: 9.00, precioFamiliar: 16.90 },
-  { id: 11, name: 'PeppeRicky', description: 'Peperoni, Carne Burguer Ricky', base: 'bbq', precioChapata: 4.90, precioMediana: 10.50, precioFamiliar: 18.90 },
-  { id: 12, name: 'Vegetariana', description: 'Champiñones, Pimiento Rojo y Verde', base: 'bbq', precioChapata: 4.90, precioMediana: 10.50, precioFamiliar: 18.90 },
+  { id: 10, name: 'Ricky BBQ', ingredientes: 'Carne Burguer Ricky', base: 'BBQ', precioChapata: 4.40, precioMediana: 9.00, precioFamiliar: 16.90 },
+  { id: 11, name: 'PeppeRicky', ingredientes: 'Peperoni, Carne Burguer Ricky', base: 'BBQ', precioChapata: 4.90, precioMediana: 10.50, precioFamiliar: 18.90 },
+  { id: 12, name: 'Vegetariana', ingredientes: 'Champiñones, Pimiento Rojo y Verde', base: 'BBQ', precioChapata: 4.90, precioMediana: 10.50, precioFamiliar: 18.90 },
 
 
   /* SALSA NATA */
-  { id: 13, name: 'Carbonara', description: 'Champiñones, Bacon, Cebolla', base: 'nata', precioChapata: 4.90, precioMediana: 10.50, precioFamiliar: 18.90 },
-  { id: 14, name: 'Caramelizada', description: 'Queso de cabra, Cebolla caramelizada', base: 'nata', precioChapata: 4.90, precioMediana: 9.00, precioFamiliar: 16.90 },
-  { id: 15, name: 'Marinera', description: 'Gambas, Atun', base: 'nata', precioChapata: 4.90, precioMediana: 9.00, precioFamiliar: 16.90 },
+  { id: 13, name: 'Carbonara', ingredientes: 'Champiñones, Bacon, Cebolla', base: 'Nata', precioChapata: 4.90, precioMediana: 10.50, precioFamiliar: 18.90 },
+  { id: 14, name: 'Caramelizada', ingredientes: 'Queso de cabra, Cebolla caramelizada', base: 'Nata', precioChapata: 4.90, precioMediana: 9.00, precioFamiliar: 16.90 },
+  { id: 15, name: 'Marinera', ingredientes: 'Gambas, Atun', base: 'Nata', precioChapata: 4.90, precioMediana: 9.00, precioFamiliar: 16.90 },
 
   /* SALSA BBQ CREME */
-  { id: 16, name: 'Cremosa BBQ', description: 'Pollo, Bacon, Champiñones', base: 'bbq-creme', precioChapata: 4.90, precioMediana: 10.50, precioFamiliar: 18.90 },
+  { id: 16, name: 'Cremosa BBQ', ingredientes: 'Pollo, Bacon, Champiñones', base: 'BBQ-Creme', precioChapata: 4.90, precioMediana: 10.50, precioFamiliar: 18.90 },
 
   /* SALSA KEBAB */
-  { id: 17, name: 'Kebab Extra', description: 'Carne de Kebab, Salsa Kebab', base: 'kebab', precioChapata: 4.90, precioMediana: 10.50, precioFamiliar: 18.90 },
+  { id: 17, name: 'Kebab Extra', ingredientes: 'Carne de Kebab, Salsa Kebab', base: 'Kebab', precioChapata: 4.90, precioMediana: 10.50, precioFamiliar: 18.90 },
 ];
