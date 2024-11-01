@@ -58,7 +58,7 @@ const Home = () => {
           />
         </div>
 
-        <div>
+        <div className='texto-container'>
           <h3>¡BIENVENIDOS A LA PORCION!</h3>
           <p>
             NUESTRA PASION ES LA PIZZA. AQUI ENCONTRARÁS SABORES AUTÉNTICOS, MASAS HECHAS A MANO Y LOS INGREDIENTES MÁS FRESCOS, 
@@ -70,10 +70,12 @@ const Home = () => {
             TU HOGAR, ESTAMOS AQUÍ PARA HACER DE CADA COMIDA UNA OCASION ESPECIAL. 
           </p>
         </div>
+
       </section>
 
       {/* SECCION 3 */}
       <section className="section-conocenos">
+      
 
         <div className="fotos-content">
           <div className="carrusel">
