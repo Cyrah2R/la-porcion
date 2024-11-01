@@ -4,19 +4,21 @@
   
   --background-color: #111111;
   --background-color-2: #252525;
-  --fondo-semitransparente: rgba(0, 0, 0, 0.5);
+  --fondo-semitransparente: #25252590;
 
   --text-color: #ffffff;
-  --text-color-h2: #333333; /* Color para los H2 */
-  --text-color-p: #666666;  /* Color para los párrafos */
+  --text-color-h2: #333333;
+  --text-color-p: #666666; 
 
   --orange: #ff8c00;
   --orange-2: #E3702A;
   --orange-hover: #ff8c00bb; 
+  --orange-semitransparente: #ff8c0019; 
 
   --green: #6EB743;
   --green-2: #6EB743;
   --green-hover: #6eb74377; 
+  --green-semitransparente: #6eb74319; 
   
 }
 
@@ -25,7 +27,7 @@ body {
   margin: 0;
   background-color: var(--background-color);
   font-family: system-ui;
-  color: var(--text-color-p); /* Color de texto por defecto */
+  color: var(--text-color-p);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

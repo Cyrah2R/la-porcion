@@ -71,9 +71,9 @@ const Servicios = () => {
           <a href='https://www.instagram.com/pizzerialaporcion/' target='_blank' rel='noopener noreferrer'>
             <Icono nombre='instagram' className='footer-icons' /> Instagram
           </a>
-          <a href='https://facebook.com' target='_blank' rel='noopener noreferrer'>
+          {/* <a href='https://facebook.com' target='_blank' rel='noopener noreferrer'>
             <Icono nombre='facebook' className='footer-icons' /> Facebook
-          </a>
+          </a> */}
           {/* Añadir más redes si es necesario */}
         </div>
       </div>

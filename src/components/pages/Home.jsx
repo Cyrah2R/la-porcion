@@ -47,26 +47,29 @@ const Home = () => {
       {/* SECCION 2 */}
       <section className="section-video">
 
-        <video 
-          src={videoSrc} 
-          autoPlay 
-          loop 
-          muted 
-          playsInline 
-          className="video" 
-        />
+        <div className='video-container'>
+          <video 
+            src={videoSrc} 
+            autoPlay 
+            loop 
+            muted 
+            playsInline 
+            className="video" 
+          />
+        </div>
 
-        <h3>¡BIENVENIDOS A LA PORCION!</h3>
-        <p>
-          NUESTRA PASION ES LA PIZZA. AQUI ENCONTRARÁS SABORES AUTÉNTICOS, MASAS HECHAS A MANO Y LOS INGREDIENTES MÁS FRESCOS, 
-          TODO PREPARADO CON DEDICACIÓN Y CARIÑO. YA SEA QUE PREFIERAS UNA CLÁSICA MARGARITA O UNA CREACIÓN ÚNICA DE LA CASA, 
-          CADA BOCADO TE LLEVARÁ A UN VIAJE LLENO DE TRADICIÓN Y AMOR POR LA COCINA
-          <br/><br/>
-          SIÉNTETE COMO EN CASA MIENTRAS EXPLORAS NUESTRA CARTA, DESCUBRE NUESTRAS ESPECIALIDADES Y CONOCE LA EXPERIENCIA ÚNICA 
-          QUE OFRECEMOS. TANTO SI NOS VISITAS CON AMIGOS, EN FAMILIA O DECIDES DISFRUTAR DE NUESTRAS PIZZAS EN LA COMODIDAD DE 
-          TU HOGAR, ESTAMOS AQUÍ PARA HACER DE CADA COMIDA UNA OCASION ESPECIAL. 
-        </p>
-          
+        <div>
+          <h3>¡BIENVENIDOS A LA PORCION!</h3>
+          <p>
+            NUESTRA PASION ES LA PIZZA. AQUI ENCONTRARÁS SABORES AUTÉNTICOS, MASAS HECHAS A MANO Y LOS INGREDIENTES MÁS FRESCOS, 
+            TODO PREPARADO CON DEDICACIÓN Y CARIÑO. YA SEA QUE PREFIERAS UNA CLÁSICA MARGARITA O UNA CREACIÓN ÚNICA DE LA CASA, 
+            CADA BOCADO TE LLEVARÁ A UN VIAJE LLENO DE TRADICIÓN Y AMOR POR LA COCINA
+            <br/><br/>
+            SIÉNTETE COMO EN CASA MIENTRAS EXPLORAS NUESTRA CARTA, DESCUBRE NUESTRAS ESPECIALIDADES Y CONOCE LA EXPERIENCIA ÚNICA 
+            QUE OFRECEMOS. TANTO SI NOS VISITAS CON AMIGOS, EN FAMILIA O DECIDES DISFRUTAR DE NUESTRAS PIZZAS EN LA COMODIDAD DE 
+            TU HOGAR, ESTAMOS AQUÍ PARA HACER DE CADA COMIDA UNA OCASION ESPECIAL. 
+          </p>
+        </div>
       </section>
 
       {/* SECCION 3 */}
@@ -75,7 +78,7 @@ const Home = () => {
         <div className="fotos-content">
           <div className="carrusel">
             <img
-              src={require(`../assets/images/${fotos[indiceFoto].id}.png`)} // Asegúrate de que esta ruta sea correcta
+              src={require(`../assets/images/${fotos[indiceFoto].id}.png`)} 
               alt={fotos[indiceFoto].nombre} 
               className="carrusel-imagen"
             />
