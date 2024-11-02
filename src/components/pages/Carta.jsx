@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 import './pages.css';
 
 const Carta = () => {
-
+  
   const [categoria, setCategoria] = useState(null);
   const [subcategoria, setSubcategoria] = useState(null);
 
@@ -26,43 +26,18 @@ const Carta = () => {
     setSubcategoria(null);
   };
 
-  const handleSubcategoriaChange = (nuevaSubcategoria) => {
-    setSubcategoria(subcategoria === nuevaSubcategoria ? null : nuevaSubcategoria);
-  };
-
-  const renderSubcategorias = () => {
-    if (categoria === 'pizzas') {
-      return (
-        <div className={`subcategorias ${categoria ? 'open' : ''}`}>
-          {['Tomate', 'BBQ', 'Nata', 'BBQ-Creme', 'Kebab'].map((item) => (
-            <div key={item}>
-              <button onClick={() => handleSubcategoriaChange(item)}>
-                <div className='base'>
-                  <p>Base</p>
-                  {item.charAt(0).toUpperCase() + item.slice(1)}
-                </div>
-                <Icono nombre='flechaD' className='flechaD-icon' />
-              </button>
-              <div className={`items-container ${subcategoria === item ? 'open' : ''}`}>
-                {subcategoria === item && renderItems('pizzas', item)}
-              </div>
-            </div>
-          ))}
-        </div>
-      );
-    }
-    return null;
-  };
-
   const renderItems = (categoria, subcategoria) => {
-
     let items = [];
 
     switch (categoria) {
+
       case 'pizzas':
         items = Pizzas.filter((pizza) => pizza.base === subcategoria);
+
         return (
+
           <table className="items-table">
+
             <thead>
               <tr>
                 <th>Nombre</th>
@@ -72,17 +47,19 @@ const Carta = () => {
                 <th>Familiar (€)</th>
               </tr>
             </thead>
+
             <tbody>
               {items.map((pizza) => (
                 <tr key={pizza.id}>
                   <td>{pizza.name}</td>
                   <td>{pizza.ingredientes}</td>
-                  <td>{pizza.precioChapata}</td>
-                  <td>{pizza.precioMediana}</td>
-                  <td>{pizza.precioFamiliar}</td>
+                  <td>{pizza.precioChapata.toFixed(2)}</td>
+                  <td>{pizza.precioMediana.toFixed(2)}</td>
+                  <td>{pizza.precioFamiliar.toFixed(2)}</td>
                 </tr>
               ))}
             </tbody>
+
           </table>
         );
 
@@ -96,26 +73,30 @@ const Carta = () => {
 
       case 'complementos':
         items = Complementos;
+
         return (
           <table className="items-table">
+
             <thead>
               <tr>
                 <th>Nombre</th>
-                <th>Chica (€)</th>
-                <th>Mediana (€)</th>
-                <th>Grande (€)</th>
+                <th>6uds. (€)</th>
+                <th>9uds. (€)</th>
+                <th>12uds. (€)</th>
               </tr>
             </thead>
+
             <tbody>
               {items.map((complemento) => (
                 <tr key={complemento.id}>
                   <td>{complemento.name}</td>
-                  <td>{complemento.priceChica}</td>
-                  <td>{complemento.priceMediana || '-'}</td>
-                  <td>{complemento.priceGrande || '-'}</td>
+                  <td>{complemento.price6uds.toFixed(2)}</td>
+                  <td>{complemento.price9uds ? complemento.price9uds.toFixed(2) : '-'}</td>
+                  <td>{complemento.price12uds ? complemento.price12uds.toFixed(2) : '-'}</td>
                 </tr>
               ))}
             </tbody>
+
           </table>
         );
 
@@ -128,37 +109,81 @@ const Carta = () => {
     }
 
     return (
+
       <table className="items-table">
+
         <thead>
           <tr>
             <th>Nombre</th>
-            <th>Descripción</th>
+            <th>Ingredientes</th>
             <th>Precio (€)</th>
           </tr>
         </thead>
+
         <tbody>
           {items.map((item) => (
             <tr key={item.id}>
               <td>{item.name}</td>
-              <td>{item.description || '-'}</td>
-              <td>{item.price || '-'}</td>
+              <td>{item.ingredientes || '-'}</td>
+              <td>{item.price ? item.price.toFixed(2) : '-'}</td>
             </tr>
           ))}
         </tbody>
+
       </table>
     );
   };
 
+  const handleSubcategoriaChange = (nuevaSubcategoria) => {
+    setSubcategoria(subcategoria === nuevaSubcategoria ? null : nuevaSubcategoria);
+  };
+
+  const renderSubcategorias = () => {
+
+    if (categoria === 'pizzas') {
+
+      return (
+
+        <div className={`subcategorias ${categoria ? 'open' : ''}`}>
+
+          {['Tomate', 'BBQ', 'Nata', 'BBQ-Creme', 'Kebab'].map((item) => (
+
+            <div key={item}>
+
+              <button onClick={() => handleSubcategoriaChange(item)}>
+
+                <div className='base'>
+                  {`Base ${item.charAt(0).toUpperCase() + item.slice(1)}`}
+                </div>
+                <Icono nombre='flechaD' className='flechaD-icon' />
+
+              </button>
+
+              <div className={`items-container ${subcategoria === item ? 'open' : ''}`}>
+                {subcategoria === item && renderItems('pizzas', item)}
+              </div>
+
+            </div>
+
+          ))}
+        </div>
+      );
+    }
+
+    return null;
+
+  };
+
+
+
   return (
-
     <div className="carta">
-
       <div className="logo-container">
         <img src={require('../assets/images/logo-laporcion-blanco.png')} className='logo' alt="La Porción" />
       </div>
       
       <div className='link-container'>
-        <Link to="/servicios" className='link'>¡Haz tu pedido aqui!</Link>
+        <Link to="/servicios" className='link'>¡Haz tu pedido aquí!</Link>
       </div>
 
       <div className="categorias">
@@ -175,7 +200,6 @@ const Carta = () => {
           </div>
         ))}
       </div>
-
     </div>
   );
 };

@@ -17,6 +17,7 @@ const Contacto = () => {
         Accept: 'application/json', // Aceptar respuesta en JSON
       },
     })
+
       .then((response) => {
         if (response.ok) {
           setEnviado(true); // Marca el formulario como enviado
@@ -25,6 +26,7 @@ const Contacto = () => {
           throw new Error('Error en el envío del formulario');
         }
       })
+      
       .catch((error) => {
         console.error('Error:', error);
       });
@@ -32,11 +34,14 @@ const Contacto = () => {
 
   const handleArchivoChange = (e) => {
     setArchivo(e.target.files[0]); // Guarda el archivo seleccionado
+
+    console.log(archivo);
   };
 
   return (
 
     <div className="contacto">
+
       <h1>Contacto</h1>
       <p>Déjanos tu mensaje y nos pondremos en contacto contigo a la brevedad posible.</p>
 
@@ -44,6 +49,7 @@ const Contacto = () => {
       {enviado && <p>Tu mensaje ha sido enviado correctamente. Gracias por contactarnos!</p>} 
 
       <form onSubmit={handleSubmit}>
+
         <div className="form-group">
           <label htmlFor="nombre">Nombre:</label>
           <input type="text" id="nombre" name="nombre" required />

@@ -4,7 +4,7 @@
   
   --background-color: #111111;
   --background-color-2: #252525;
-  --fondo-semitransparente: #25252590;
+  --fondo-semitransparente: #25252533;
 
   --text-color: #ffffff;
   --text-color-h2: #333333;
@@ -13,12 +13,12 @@
   --orange: #ff8c00;
   --orange-2: #E3702A;
   --orange-hover: #ff8c00bb; 
-  --orange-semitransparente: #ff8c0019; 
+  --orange-semitransparente: #ff8c0033; 
 
   --green: #6EB743;
   --green-2: #6EB743;
   --green-hover: #6eb74377; 
-  --green-semitransparente: #6eb74319; 
+  --green-semitransparente: #6eb74333; 
   
 }
 

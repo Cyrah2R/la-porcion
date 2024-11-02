@@ -31,7 +31,7 @@ const Inicio = () => {
       <div className='video-container'>
         <video 
           ref={videoRef}
-          className='responsive-video'
+          className='video-inicio'
           autoPlay 
           muted
           playsInline

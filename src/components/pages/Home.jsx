@@ -54,7 +54,7 @@ const Home = () => {
             loop 
             muted 
             playsInline 
-            className="video" 
+            className="video-home" 
           />
         </div>
 
