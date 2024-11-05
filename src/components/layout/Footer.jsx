@@ -50,7 +50,7 @@ export const Footer = () => {
 
             <div className='footer-links-div'>
               <h4>Siguenos:</h4>
-              <div className='socialmedia'>
+              <div className='socialmedia-footer'>
                 <a href='https://instagram.com/pizzerialaporcion/' target='_blank' rel='noopener noreferrer'>
                   <Icono nombre='instagram' className='footer-icons' />
                 </a>

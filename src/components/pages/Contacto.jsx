@@ -4,25 +4,25 @@ import './pages.css';
 const Contacto = () => {
   const [motivo, setMotivo] = useState('');
   const [archivo, setArchivo] = useState(null);
-  const [enviado, setEnviado] = useState(false); // Estado para manejar el mensaje de éxito
+  const [enviado, setEnviado] = useState(false); 
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const formData = new FormData(e.target); // Crea un objeto FormData con los datos del formulario
+    const formData = new FormData(e.target); 
 
-    fetch('https://formspree.io/f/{tu_form_id}', { // Reemplaza con tu URL de Formspree
+    fetch('https://formspree.io/f/xeoqgqdo', { 
       method: 'POST',
       body: formData,
       headers: {
-        Accept: 'application/json', // Aceptar respuesta en JSON
+        Accept: 'application/json',
       },
     })
 
       .then((response) => {
         if (response.ok) {
-          setEnviado(true); // Marca el formulario como enviado
-          e.target.reset(); // Reinicia el formulario
+          setEnviado(true); 
+          e.target.reset(); 
         } else {
           throw new Error('Error en el envío del formulario');
         }
