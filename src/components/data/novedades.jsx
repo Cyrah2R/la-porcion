@@ -17,12 +17,12 @@ export const novedades = [
       description: 'Descripción de la tercera novedad.',
       image: require('../assets/images/novedad3.png')
   },
-  {
-      id: 'novedad4',
-      title: 'Cuarta Novedad',
-      description: 'Descripción de la cuarta novedad.',
-      image: require('../assets/images/novedad4.png')
-  },
+  // {
+  //     id: 'novedad4',
+  //     title: 'Cuarta Novedad',
+  //     description: 'Descripción de la cuarta novedad.',
+  //     image: require('../assets/images/novedad4.png')
+  // },
     // Más novedades...
   ];
   

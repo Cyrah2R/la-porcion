@@ -27,7 +27,9 @@ const Inicio = () => {
   };
   
   return (
+
     <div className='inicio'>
+
       <div className='video-container'>
         <video 
           ref={videoRef}
@@ -53,6 +55,7 @@ const Inicio = () => {
           <h3>¡Adelante!</h3>
         </div>
       )}
+      
     </div>
   );
 };

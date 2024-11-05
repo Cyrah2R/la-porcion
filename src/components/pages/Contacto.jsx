@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './pages.css';
 
 const Contacto = () => {
   const [motivo, setMotivo] = useState('');

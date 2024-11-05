@@ -1,6 +1,6 @@
 import React from 'react';
-import Icono from '../../assets/iconos';
-import './footer.css';
+import Icono from '../assets/iconos';
+import '../../index.css';
 
 export const Footer = () => {
   return (
@@ -53,9 +53,6 @@ export const Footer = () => {
               <div className='socialmedia'>
                 <a href='https://instagram.com/pizzerialaporcion/' target='_blank' rel='noopener noreferrer'>
                   <Icono nombre='instagram' className='footer-icons' />
-                </a>
-                <a href='https://facebook.com' target='_blank' rel='noopener noreferrer'>
-                  <Icono nombre='facebook' className='footer-icons' />
                 </a>
               </div>
             </div>

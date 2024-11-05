@@ -90,7 +90,7 @@ const Carta = () => {
               {items.map((complemento) => (
                 <tr key={complemento.id}>
                   <td>{complemento.name}</td>
-                  <td>{complemento.price6uds.toFixed(2)}</td>
+                  <td>{complemento.price6uds ? complemento.price6uds.toFixed(2) : '-'}</td>
                   <td>{complemento.price9uds ? complemento.price9uds.toFixed(2) : '-'}</td>
                   <td>{complemento.price12uds ? complemento.price12uds.toFixed(2) : '-'}</td>
                 </tr>

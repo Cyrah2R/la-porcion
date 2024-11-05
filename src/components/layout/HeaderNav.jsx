@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import Icono from '../../assets/iconos';
-// import logo from '../../assets/images/logo-menu.png';
-import './headerNav.css';
+import Icono from '../assets/iconos';
+import '../../index.css';
 
 export const HeaderNav = () => {
   const [menu, setMenu] = useState(false);

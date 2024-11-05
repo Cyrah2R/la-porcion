@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { novedades } from '../data/novedades';
 import { fotos } from '../data/fotos';
+import logoSrc from '../assets/images/logo-transp.png';
 import videoSrc from '../assets/videos/home-bienvenida.mp4';
 import './pages.css';
 
@@ -33,6 +34,7 @@ const Home = () => {
       <section className="section-novedades">
 
         <div className="novedades-content">
+
           <div className="carrusel">
             <img
               src={novedades[indiceNovedades].image}
@@ -47,6 +49,12 @@ const Home = () => {
       {/* SECCION 2 */}
       <section className="section-video">
 
+        <img 
+          src={logoSrc}
+          alt="logo" 
+          className="logo-laporcion"
+        />
+        
         <div className='video-container'>
           <video 
             src={videoSrc} 

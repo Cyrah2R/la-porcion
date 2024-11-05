@@ -11,7 +11,7 @@ export const Pizzas = [
   { id: 8, name: 'Cha-Pi-Tun', ingredientes: 'Champiñones, Pimiento Rojo, Atun', base: 'Tomate', precioChapata: 4.90, precioMediana: 10.50, precioFamiliar: 18.90 },
   { id: 9, name: '5 Quesos', ingredientes: 'Mezcla de 5 Quesos', base: 'Tomate', precioChapata: 4.90, precioMediana: 10.50, precioFamiliar: 18.90 },
   { id: 10, name: 'Ricky Tomate', ingredientes: 'Carne Burguer Ricky', base: 'Tomate', precioChapata: 4.40, precioMediana: 9.00, precioFamiliar: 16.90 },
-  { id: 11, name: 'Kebab Tomate', ingredientes: 'Carne de Kebab, Salsa Kebab', base: 'Kebab', precioChapata: 4.90, precioMediana: 10.50, precioFamiliar: 18.90 },
+  { id: 11, name: 'Kebab Tomate', ingredientes: 'Carne de Kebab, Salsa Kebab', base: 'Tomate', precioChapata: 4.90, precioMediana: 10.50, precioFamiliar: 18.90 },
 
   /* SALSA BBQ */
   { id: 101, name: 'Ricky BBQ', ingredientes: 'Carne Burguer Ricky', base: 'BBQ', precioChapata: 4.40, precioMediana: 9.00, precioFamiliar: 16.90 },
