@@ -11,7 +11,7 @@ const Home = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndiceNovedades((prevIndex) => (prevIndex + 1) % novedades.length);
-    }, 3000); 
+    }, 5000); 
 
     return () => clearInterval(interval); 
   }, []);
@@ -21,14 +21,19 @@ const Home = () => {
   useEffect(() => {
     const intervalFotos = setInterval(() => {
       setIndiceFoto((prevIndex) => (prevIndex + 1) % fotos.length);
-    }, 5000); 
+    }, 2000); 
 
     return () => clearInterval(intervalFotos); 
   }, []);
 
-  
   return (
     <div className="home">
+
+      <img 
+        src={logoSrc}
+        alt="logo" 
+        className="logo-laporcion"
+      />
 
       {/* SECCION 1 */}
       <section className="section-novedades">
@@ -48,12 +53,6 @@ const Home = () => {
 
       {/* SECCION 2 */}
       <section className="section-video">
-
-        <img 
-          src={logoSrc}
-          alt="logo" 
-          className="logo-laporcion"
-        />
         
         <div className='video-container'>
           <video 

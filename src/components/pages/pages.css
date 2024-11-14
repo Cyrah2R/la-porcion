@@ -73,14 +73,22 @@
   width: 100%;
   padding: 0;
   margin: 0;
+  background-color: var(--background-color-2);
 }
 
 .home h3, 
 .home p {
-  font-family: system-ui;
+  font-family: Baskerville;
   text-align: center; 
   color: var(--text-color);
   margin: 10px;
+}
+
+.logo-laporcion {
+  width: 70%;
+  max-width: 500px; 
+  height: auto;
+  object-fit: contain;
 }
 
 .carrusel {
@@ -119,15 +127,7 @@
   flex-direction: column;
   align-items: center;
   padding: 20px 0;
-  background-color: var(--orange-semitransparente);
   text-align: center;
-}
-
-.logo-laporcion {
-  width: 70%;
-  max-width: 500px; 
-  height: auto;
-  object-fit: contain;
 }
 
 .video-container {
@@ -154,7 +154,6 @@
 .section-conocenos {
   width: 100%;
   padding: 20px 0;
-  background-color: var(--orange-semitransparente);
   background-image: url('../assets/images/fondo-img.png');
   background-size: cover;
   background-position: center;
